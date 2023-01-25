@@ -3,7 +3,8 @@ const bir = document.getElementById('bir')
 const iki = document.getElementById('iki')
 const container = document.querySelector('.container')
 const selectBox = document.querySelector('.select-box')
-
+const oyuncuX = document.querySelector('.x')
+const oyuncuO = document.querySelector('.o')
 
 
 
@@ -29,3 +30,9 @@ container.addEventListener(('click'),function(e){
     }
 })
 
+oyuncuX.addEventListener('click',function(){
+    container.style.display = 'flex'
+})
+oyuncuO.addEventListener('click',function(){
+    container.style.display = 'flex'
+})
