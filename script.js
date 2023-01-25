@@ -1,19 +1,31 @@
-const module = document.querySelector('.modul')
+const modul = document.querySelector('.modul')
 const bir = document.getElementById('bir')
 const iki = document.getElementById('iki')
+const container = document.querySelector('.container')
+const selectBox = document.querySelector('.select-box')
 
-module.addEventListener('click',function(){
+
+
+
+modul.addEventListener('click',function(){
      bir.style.display = 'flex'
      iki.style.display = 'flex'
 })
 iki.addEventListener('click',function(){
     bir.style.display = 'none'
     iki.style.display = 'none'
-    module.innerHTML = 'O'
+    modul.innerHTML = 'o'
 })
 
 bir.addEventListener('click',function(){
     bir.style.display = 'none'
     iki.style.display = 'none'
-    module.innerHTML = 'X'
+    modul.innerHTML = 'X'
 })
+
+container.addEventListener(('click'),function(e){
+    if(e.target.classList.contains('modul')){
+        e.target.classList.toggle('selected')             
+    }
+})
+
